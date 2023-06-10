@@ -1,0 +1,35 @@
+<!--
+	Purpose: hard-coded layout file for <Console />
+	Having a ConsoleMessageTarget StaticConsoleMessageTarget and ConsoleInput ConsoleInput is mandatory,
+	while the resizing panels are NOT
+
+	For performance's sake, most stuff is done in code and customization is limited, see con_ cvars.
+-->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/main.scss" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/console.js"/>
+	</scripts>
+
+	<Panel class="console__outer" hittest="true" defaultfocus="ConsoleInput">
+		<Panel id="MoveDragArea" class="console__move-drag-area vertical-align-center" draggable="true">
+			<Label text="Console" class="console__header" />
+			<Button class="horizontal-align-right" onactivate="Console.toggle()">
+				<Image class="button__icon" src="file://{images}/icons/close.svg" textureheight="12" />
+			</Button>
+		</Panel>
+
+		<Panel class="console__top-splitter" />
+
+		<Panel class="console__inner" acceptsfocus="true" acceptsinput="true">
+			<StaticConsoleMessageTarget id="ConsoleMessageTarget" class="console__message-target full-width" />
+			<ConsoleInput id="ConsoleInput" class="console__input textentry full-width" clearaftersubmit="true" />
+		</Panel>
+		
+		<ResizeDragKnob target="Console" class="console__resize-drag-knob">
+			<Image src="file://{images}/icons/resize.svg" textureheight="12" />
+		</ResizeDragKnob>
+	</Panel>
+</root>

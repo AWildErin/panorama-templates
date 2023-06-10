@@ -1,0 +1,57 @@
+
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:math';
+
+// =========
+// FONTS
+// =========
+$font-monospace: notomono-regular;
+
+// =========
+// COLOURS
+// =========
+
+$transparent: #00000000 !default;
+$transparent-black: rgba(0, 0, 0, math.div(128, 255)) !default;
+$orange: rgba(255, 155, 0, 1) !default;
+$black: #000000 !default;
+$white: #ffffff !default;
+
+$base-text: rgba(216, 222, 211, math.div(255, 255)) !default;
+$control-text: rgba(216, 222, 211, math.div(255, 255)) !default;
+
+$list-bg: rgba(62, 70, 55, math.div(255, 255)) !default;
+
+// Border
+$border-bright: rgba(200, 200, 200, 0.76) !default; // the lit side of a control
+$border-dark: rgba(40, 40, 40, 0.76) !default; // the dark/unlit side of a control
+$border-selection: rgba(0, 0, 0, 0.76) !default; // the additional border color for displaying the default/selected button
+
+// Frame
+$frame-radius: 8px !default;
+$frame-bg-color: rgba(160, 160, 160, math.div(128, 255)) !default;
+$frame-no-focus-bg-color: rgba(160, 160, 160, math.div(32, 55)) !default;
+
+$frame-title-text-inset-x: 12px !default;
+$frame-client-inset-x: 12px !default;
+$frame-client-inset-y: 6px !default;
+
+// Text Entry
+
+
+// ================
+// SCROLLBAR
+// ================
+
+$scrollbar-width: 8px !default;
+$scrollbar-radius: 0px !default;
+$scrollbar-color: $white !default;
+$scrollbar-opacity: 0.6 !default;
+$scrollbar-hover-opacity: 0.8 !default;
+
+// ================
+// LAYOUT / UTILITY
+// ================
+
+$spacers: (4px, 6px, 8px, 16px, 32px) !default;

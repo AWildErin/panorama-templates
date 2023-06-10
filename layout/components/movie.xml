@@ -1,0 +1,41 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/main.scss" />
+	</styles>
+
+	<Movie>
+		<MoviePanel id="MoviePanel" />
+
+		<!-- Shown in minimal control ui -->
+		<Panel id="PlayIndicator" />
+		<Panel id="LoadingThrobber" />
+		<!-- <LoadingThrobber id="LoadingThrobber" /> -->
+		<Label id="ErrorMessage" text="#Panorama_MoviePlaybackError" />
+
+		<Panel id="PlaybackTitleAndControls">
+			<Label id="PlaybackTitle" />
+
+			<Panel id="PlaybackControls">
+				<Label id="PlaybackSpeed" />
+				<Panel id="Timeline">
+					<!-- Add bar for buffered data -->
+
+					<Panel id="PlaybackProgress" />
+				</Panel>
+
+				<Panel id="ControlBarRow">
+					<Panel id="ControlBar" tabindex="auto" selectionpos="auto" defaultfocus="PlayPause">
+						<Panel class="ControlBarButtons" tabindex="auto" selectionpos="auto">
+							<Button id="JumpBack" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerJumpBack();" />
+							<ToggleButton id="PlayPause" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerTogglePlayPause();" />
+							<Button id="FastForward" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFastForward();" />
+							<Button id="VideoQualityBtn" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerSelectVideoQuality();" />
+							<Button id="VolumeControl" tabindex="auto" selectionpos="auto" onactivate="MoviePlayerVolumeControl();" />
+							<Button id="FullscreenControl"  tabindex="auto" selectionpos="auto" onactivate="MoviePlayerFullscreenControl();" />
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Movie>
+</root>

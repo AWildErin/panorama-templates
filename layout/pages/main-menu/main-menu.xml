@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/main.scss" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/common/game-ui.js" />
+		<include src="file://{resources}/scripts/pages/mainmenu.js" />
+	</scripts>
+
+	<snippets>
+		<snippet name="MainMenuMovieSnippet">
+			<Panel>
+				<!-- Source is set in script. -->
+				<!-- Set what you want the movie to be using the data-type example 'nuke' the .webm is appended in script. -->
+				<Movie id="MainMenuMovie" src="" sound="" controls="none" repeat="true" hittest="false" />
+			</Panel>
+		</snippet>
+	</snippets>
+
+	<ChaosMainMenu hittest="false" useglobalcontext="true" oncancel="MainMenuController.onEscapeKeyPressed();">
+		<Panel id="MainMenuInput">
+			<!-- Movie background -->
+			<Panel id="MainMenuMovieParent" />
+		</Panel>
+
+		<!-- Make sure these are at the bottom to get the z-order right -->
+		<ChaosPopupManager id="PopupManager" onpopupsdismissed="" />
+		<ContextMenuManager id="ContextMenuManager" />
+		<ChaosTooltipManager id="TooltipManager" hittest="false" />
+
+		<!-- Doesn't actually include the notifications, but we use its position to figure out where to show them -->
+		<Panel id="SteamNotificationsPlaceholder" hittest="false" />
+	</ChaosMainMenu>
+</root>

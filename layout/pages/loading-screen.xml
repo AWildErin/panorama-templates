@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/main.scss" />
+	</styles>
+
+	<Panel>
+		<Panel>
+			<Label id="ProgressStatusText" text="Loading..." />
+			<Label id="PercentText" text="{d:percent}%" />
+		</Panel>
+		<ProgressBar id="ProgressBar"/>
+	</Panel>
+</root>
